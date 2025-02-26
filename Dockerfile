@@ -49,15 +49,12 @@ COPY --from=builder /usr/local/bin /usr/local/bin
 # Copy application source code (already cloned in builder stage)
 COPY --from=builder /app /app
 
-# Pull the Llama3 model
-RUN ollama pull llama3
-
-# Run the model (you can modify this to fit how you run it in your app)
-CMD ollama run llama3 && gunicorn --bind 0.0.0.0:5000 main-app-flask:app
-
 # Expose Flask port
 EXPOSE 5000
 
 # Add a healthcheck
 HEALTHCHECK --interval=30s --timeout=10s --retries=3 \
   CMD curl -f http://localhost:5000 || exit 1
+
+# Start Ollama to pull the model and run Flask application
+CMD ollama pull llama3 && gunicorn --bind 0.0.0.0:5000 main-app-flask:app
