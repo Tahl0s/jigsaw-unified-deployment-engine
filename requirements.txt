@@ -1,0 +1,6 @@
+Flask>=2.0.0
+ntplib>=0.4.0
+langchain-ollama
+langchain-core
+ollama
+gunicorn;
