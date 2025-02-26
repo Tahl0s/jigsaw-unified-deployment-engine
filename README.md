@@ -1,4 +1,3 @@
-```markdown
 # J.U.D.E - Jigsaw Unified Deployment Engine
 **#ai #devops #opensource #cloud**
 
