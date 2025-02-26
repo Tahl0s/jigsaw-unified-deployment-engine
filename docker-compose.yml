@@ -4,14 +4,14 @@ services:
   ol-assistant:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile  # Ensure this points to the updated Dockerfile
     ports:
       - "5000:5000"
     environment:
       FLASK_APP: main-app-flask.py
       FLASK_ENV: production
     volumes:
-      - .:/app  # Mounts the project directory
+      - .:/app  # Mounts the project directory (optional, only if you need local changes to reflect)
       - ./data:/app/data  # Persists data/logs
     restart: unless-stopped  # Ensures auto-restart on failure
     healthcheck:
