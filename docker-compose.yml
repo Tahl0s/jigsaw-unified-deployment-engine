@@ -3,8 +3,8 @@ version: "3.8"
 services:
   ol-assistant:
     build:
-      context: .
-      dockerfile: Dockerfile  # Ensure this points to the updated Dockerfile
+      context: https://github.com/Tahl0s/jigsaw-unified-deployment-engine.git  # Directly use the GitHub repo as context
+      dockerfile: Dockerfile  # Ensure this points to the updated Dockerfile in your repo
     ports:
       - "5000:5000"
     environment:
