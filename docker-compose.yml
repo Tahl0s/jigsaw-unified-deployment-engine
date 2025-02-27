@@ -3,22 +3,26 @@ version: "3.8"
 services:
   ol-assistant:
     build:
-      context: https://github.com/Tahl0s/jigsaw-unified-deployment-engine.git  # Directly use the GitHub repo as context
-      dockerfile: Dockerfile  # Ensure this points to the updated Dockerfile in your repo
+      context: https://github.com/Tahl0s/jigsaw-unified-deployment-engine.git
+      dockerfile: Dockerfile
     ports:
       - "5000:5000"
     environment:
       FLASK_APP: main-app-flask.py
       FLASK_ENV: production
+      OLLAMA_HOST: ollama         # Environment variable to connect to ollama container
+      OLLAMA_PORT: 5001           # Port Ollama is exposed on
     volumes:
-      - .:/app  # Mounts the project directory (optional, only if you need local changes to reflect)
-      - ./data:/app/data  # Persists data/logs
-    restart: unless-stopped  # Ensures auto-restart on failure
+      - .:/appa
+      - ./data:/app/data
+    restart: unless-stopped
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:5000"]
       interval: 30s
       timeout: 10s
       retries: 3
+    networks:
+      - jigsaw-network
 
   nginx:
     image: nginx:latest
@@ -29,3 +33,17 @@ services:
     depends_on:
       - ol-assistant
     restart: unless-stopped
+    networks:
+      - jigsaw-network
+
+  ollama:
+    image: ollama/ollama:latest
+    ports:
+      - "5001:5001"  # Ensure Ollama runs on the right port
+    restart: unless-stopped
+    networks:
+      - jigsaw-network
+
+networks:
+  jigsaw-network:
+    driver: bridge
