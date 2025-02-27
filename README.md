@@ -3,7 +3,8 @@
 
 J.U.D.E is a project focused on creating a locally hosted AI-powered engine for automating server management, monitoring, and alerting while remaining scalable.
 
-## Image Description
+![Screenshot 2025-02-26 002618](https://github.com/user-attachments/assets/2cd0be2e-da27-49ad-812e-338dfa0af260)
+
 Managing servers efficiently can be a challenge, and automation is key to handling complex infrastructure. **J.U.D.E (Jigsaw Unified Deployment Engine)** is designed to be an AI-driven solution for streamlining server management, monitoring, and alerting. With a locally hosted, containerized approach, J.U.D.E covers everything from security to adaptability, all while reducing operational overhead.
 
 ## Features Implemented So Far
