@@ -44,12 +44,28 @@ As of writing this, **J.U.D.E** is currently in the core refinement stage. The A
 - **Docker**: Ensure Docker is installed on your machine or server.
 - **Docker Compose**: For multi-container Docker applications.
 
+### Auto-Installer:
+
+### Windows
+
+```bash
+setup.ps1
+```
+### Linux
+
+```bash
+chmod +x setup.sh
+./setup.sh
+```
+
+### Manual Install:
+
 ### 1. Clone the Repository
 Clone this repository to your local machine:
 
 ```bash
-git clone https://github.com/your-username/jude.git
-cd jude
+git clone https://github.com/Tahl0s/jigsaw-unified-deployment-engine.git
+cd /jigsaw-unified-deployment-engine
 ```
 
 ### 2. Build and Run the Application
