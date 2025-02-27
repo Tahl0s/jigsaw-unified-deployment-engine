@@ -1,4 +1,4 @@
-# J.U.D.E - Jigsaw Unified Deployment Engine
+# J.U.D.E - Jigsaw Unified Deployment Engine - WIP
 **#ai #devops #opensource #cloud**
 
 J.U.D.E is a project focused on creating a locally hosted AI-powered engine for automating server management, monitoring, and alerting while remaining scalable.
