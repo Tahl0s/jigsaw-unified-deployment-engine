@@ -13,7 +13,7 @@ services:
       OLLAMA_HOST: ollama         # Environment variable to connect to ollama container
       OLLAMA_PORT: 5001           # Port Ollama is exposed on
     volumes:
-      - .:/appa
+      - .:/app
       - ./data:/app/data
       - ./memory:/memory
     restart: unless-stopped
