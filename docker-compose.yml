@@ -15,6 +15,7 @@ services:
     volumes:
       - .:/appa
       - ./data:/app/data
+      - ./memory:/memory
     restart: unless-stopped
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:5000"]
