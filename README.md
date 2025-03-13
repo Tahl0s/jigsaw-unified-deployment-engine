@@ -17,12 +17,12 @@ Managing servers efficiently can be a challenge, and automation is key to handli
 - **Personality Index**: Configurable personality-based responses.
 - **Reference-Based Reasoning**: Utilizing context and prior interactions to improve accuracy.
 - **Access to Network Time**: For reasoning based on real-world timestamps.
+- **Containerized Deployments**: Optimizing Docker environments for portability and scalability.
 
 ## Current Planned Future Enhancements
 - **API Integration**: For external systems and services.
 - **MFA for Interface & SSH**: Enhancing security for remote access and automated deployments.
 - **Advanced Alerting & Monitoring**: Automated incident response and remediation.
-- **Containerized Deployments**: Optimizing Docker environments for portability and scalability.
 
 ## Why J.U.D.E?
 The goal of J.U.D.E is to streamline the sometimes mundane administrative tasks involved in:
