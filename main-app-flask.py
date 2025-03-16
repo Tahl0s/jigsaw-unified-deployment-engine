@@ -5,25 +5,6 @@ import datetime
 import ntplib
 from time import ctime
 
-# === Utility Functions for Auto-Installation of Dependencies === #
-def install_and_import(package, import_name=None, alias=None):
-    try:
-        if alias:
-            globals()[alias] = __import__(import_name or package)
-        else:
-            globals()[package] = __import__(import_name or package)
-    except ImportError:
-        print(f"Installing missing package: {package}...")
-        subprocess.check_call([sys.executable, "-m", "pip", "install", package])
-        if alias:
-            globals()[alias] = __import__(import_name or package)
-        else:
-            globals()[package] = __import__(import_name or package)
-
-# Ensure primary external packages are installed.
-install_and_import("flask")
-install_and_import("ntplib")
-
 try:
     from langchain_ollama import OllamaLLM
     from langchain_core.prompts import ChatPromptTemplate
@@ -217,7 +198,7 @@ def chat():
 @app.route("/purge", methods=["POST"])
 def purge():
     try:
-        purge_memory()
+        purge_memory()  # Function that clears chat history files
         return jsonify({"message": "Memory purged successfully (except personality)."})
     except Exception as e:
         return jsonify({"message": f"Failed to purge memory: {e}"}), 500
