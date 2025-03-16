@@ -57,4 +57,5 @@ HEALTHCHECK --interval=30s --timeout=10s --retries=3 \
   CMD curl -f http://localhost:5000 || exit 1
 
 # Start Ollama to pull and run the model, then run the Flask application
-CMD ollama pull llama3 && ollama run llama3 && gunicorn --bind 0.0.0.0:5000 main-app-flask:app
+CMD ["sh", "-c", "ollama pull llama3 && ollama run llama3 & gunicorn --bind 0.0.0.0:5000 --timeout 300 main-app-flask:app"]
+
