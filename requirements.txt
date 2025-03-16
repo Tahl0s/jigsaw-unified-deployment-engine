@@ -1,6 +1,6 @@
 Flask==2.2.5
 ntplib==0.4.0
 langchain-ollama==0.1.0
-langchain-core==0.1.0
+langchain-core>=0.2.20,<0.3.0  # Fixed version conflict
 ollama==0.1.0
 gunicorn==20.1.0
