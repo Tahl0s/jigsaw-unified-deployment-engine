@@ -3,7 +3,7 @@
 
 J.U.D.E is a project focused on creating a locally hosted AI-powered engine for automating server management, monitoring, and alerting while remaining scalable.
 
-![Screenshot 2025-02-26 002618](https://github.com/user-attachments/assets/2cd0be2e-da27-49ad-812e-338dfa0af260)
+![jude](https://github.com/user-attachments/assets/f8fabc22-19c9-4c17-be84-43a8a60cc071)
 
 Managing servers efficiently can be a challenge, and automation is key to handling complex infrastructure. **J.U.D.E (Jigsaw Unified Deployment Engine)** is designed to be an AI-driven solution for streamlining server management, monitoring, and alerting. With a locally hosted, containerized approach, J.U.D.E covers everything from security to adaptability, all while reducing operational overhead.
 
@@ -34,6 +34,8 @@ By automating these tasks, J.U.D.E reduces the operational overhead and increase
 
 ## The Current State of Things
 As of writing this, **J.U.D.E** is currently in the core refinement stage. The API is being expanded to support external services, and the core logic is being refined to ensure a solid, stable framework.
+
+![Screenshot 2025-02-26 002618](https://github.com/user-attachments/assets/2cd0be2e-da27-49ad-812e-338dfa0af260)
 
 ### Next Milestones:
 - Implementing advanced token-based OAuth for secure authentication.
